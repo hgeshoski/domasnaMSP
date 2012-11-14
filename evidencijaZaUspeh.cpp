@@ -113,10 +113,16 @@ void vnes(struct student* niza, int* vel)
      sortiranje(niza,*vel);
      printf("\n");
      }
-   
+    void ispis(struct student* niza,int vel)
+     {
+          int i;
+          for(i=0;i<vel;i++)
+          printf("\nSpisok na studenti od I godina!\n %d. %s %s, Indeks: %d Prosek: %2.2f\n Ocenki:\n VoP: %d\n Elektrotehnika: %d\n Matematika: %d\n Stranski Jazik: %d\n Aplikativen Softver: %d\n", i+1,niza[i].ime,niza[i].prezime,niza[i].indeks,niza[i].prosek,niza[i].vop,niza[i].elektro,niza[i].mat,niza[i].jazik,niza[i].aplikativen);
+     
+     }
 int main(int argc, char *argv[])
 {
-    
+   
     system("PAUSE");
     return EXIT_SUCCESS;
 }
