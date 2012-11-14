@@ -13,7 +13,29 @@ struct student
 
 int main(int argc, char *argv[])
 {
-    
+     struct student spisok[MAXVEL];
+    int velicina=0,izbor=-1;
+    while(izbor!=0)
+    {
+    printf("Pritisni 1 za vnes, 2 za ispis, 3 za prebaruvanje, 0 za izlez: ");
+    scanf("%d", &izbor);
+    switch(izbor)
+    {
+    case 1:
+    vnes(spisok,&velicina);
+    break;
+    case 2:
+    ispis(spisok,velicina);
+    break;
+    case 3:
+    prebaraj(spisok,velicina);
+    break;
+    case 0:
+    break;
+    default:
+    printf("Pogreshen vnes!\n");
+    }
+    }
     system("PAUSE");
     return EXIT_SUCCESS;
 }
